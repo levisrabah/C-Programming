@@ -69,37 +69,47 @@ int isValidInput(float *input){
     return 1; // Valid input
 }
 // Function to calculate the discount
-float calculateDiscount(float totalPurchase){
-    if (totalPurchase > THRESHOLD){
-        return totalPurchase * HIGH_DISCOUNT;
-    } else {
-        return totalPurchase * LOW_DISCOUNT;
-    }
-}
-int main(){
-    // variables
-    float price, quantity, totalPurchase, discount;
-    // Prompt the user to enter the price
-    printf("Enter the price Ksh: ");
-    // Validate the user input
-    if (!isValidInput(&price)){
-        printf("Invalid input. Please enter a number.\n");
-        return 1; // Terminate the program with an error code
-    }
-    // Prompt the user to enter the quantity
+// float calculateDiscount(float totalPurchase){
+//     if (totalPurchase > THRESHOLD){
+//         return totalPurchase * HIGH_DISCOUNT;
+//     } else {
+//         return totalPurchase * LOW_DISCOUNT;
+//     }
+// }
+// int main(){
+//     // variables
+//     float price, quantity, totalPurchase, discount;
+//     // Prompt the user to enter the price
+//     printf("Enter the price Ksh: ");
+//     // Validate the user input
+//     if (!isValidInput(&price)){
+//         printf("Invalid input. Please enter a number.\n");
+//         return 1; // Terminate the program with an error code
+//     }
+//     // Prompt the user to enter the quantity
 
-    printf("Please Enter the quantity: ");
-    if (!isValidInput(&quantity)) {
-    printf("Invalid input. Please enter a number.\n");
-    return 1; // Terminate the program with an error code
-}
-    // Calculate the total purchase
-    totalPurchase = price * quantity;
-    // Calculate the discount
-    discount = calculateDiscount(totalPurchase);
-    // Display the discount
-    printf("The discount is Ksh %.2f\n", discount);
+//     printf("Please Enter the quantity: ");
+//     if (!isValidInput(&quantity)) {
+//     printf("Invalid input. Please enter a number.\n");
+//     return 1; // Terminate the program with an error code
+// }
+//     // Calculate the total purchase
+//     totalPurchase = price * quantity;
+//     // Calculate the discount
+//     discount = calculateDiscount(totalPurchase);
+//     // Display the discount
+//     printf("The discount is Ksh %.2f\n", discount);
+//     return 0;
+// }
+
+// A program to display first 10 integers and their squares
+#include <stdio.h>
+int main(){
+    printf("Number \t Square");
+    printf("\n------ \t -------");
+    int i = 10;
+    for(i=0; i<=10; i++){
+        printf("\n%d \t %d",i,i*i);
+    }
     return 0;
 }
-
-
